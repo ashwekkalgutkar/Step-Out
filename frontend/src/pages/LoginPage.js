@@ -16,7 +16,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/users/login', formData);
+      const response = await axios.post('https://step-out-1.onrender.com/api/users/login', formData);
       login(response.data.token);
       navigate('/trains');
     } catch (error) {

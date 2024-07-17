@@ -15,7 +15,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/users/register', formData);
+      await axios.post('https://step-out-1.onrender.com/api/users/register', formData);
       navigate('/login');
     } catch (error) {
       if (error.response && error.response.data.message) {

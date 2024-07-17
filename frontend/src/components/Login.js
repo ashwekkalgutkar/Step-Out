@@ -1,4 +1,3 @@
-// src/components/Login.js
 import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Alert } from '@mui/material';
 import axios from 'axios';
@@ -17,10 +16,9 @@ const Login = () => {
     e.preventDefault();
     setError('');  // Clear any previous errors
     try {
-      const response = await axios.post('http://localhost:8000/api/users/login', formData);
-      // Assuming your backend sends a token upon successful login
-      localStorage.setItem('token', response.data.token); // Store token in localStorage or context
-      navigate('/'); // Redirect to home page or dashboard
+      const response = await axios.post('https://step-out-1.onrender.com/api/users/login', formData);
+      localStorage.setItem('token', response.data.token); 
+      navigate('/'); 
     } catch (error) {
       if (error.response && error.response.data.message) {
         setError(error.response.data.message);

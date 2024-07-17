@@ -10,7 +10,7 @@ const BookingPage = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/bookings/details', {
+        const response = await axios.get('https://step-out-1.onrender.com/api/bookings/details', {
           headers: {
             Authorization: `Bearer ${token}`
           }
